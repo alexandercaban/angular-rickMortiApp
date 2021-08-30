@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+<div *ngIf=" locations$ | async as date">
+<div class="accordion" id="accordionPanelsStayOpenExample" *ngFor="let item of date.results" style="max-width: 540px;">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        {{item.name}}
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <strong>{{item.dimension}}</strong>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
